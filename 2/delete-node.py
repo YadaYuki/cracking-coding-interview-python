@@ -1,3 +1,4 @@
+# 2.3
 from linked_list import LinkedList,Node
 
 def delete_node(linked_list:LinkedList,i:int):

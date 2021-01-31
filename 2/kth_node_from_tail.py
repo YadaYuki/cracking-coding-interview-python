@@ -1,3 +1,4 @@
+# 2.2
 from linked_list import LinkedList,Node
 
 def get_kth_node_from_tail(linked_list:LinkedList,k:int) -> Node: 
