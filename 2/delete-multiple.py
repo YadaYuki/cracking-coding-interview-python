@@ -1,4 +1,4 @@
-from node import LinkedList
+from linked_list import LinkedList
 
 l = LinkedList(head_data=1)
 
