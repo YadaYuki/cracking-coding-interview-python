@@ -22,5 +22,5 @@ class LinkedList:
         while node != None:
             s += "{}->".format(node.data)
             node = node.next
-            
         return s
+    

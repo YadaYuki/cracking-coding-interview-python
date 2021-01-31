@@ -7,20 +7,15 @@ data = [1,2,3,4,2,1,3,5,2,2,4]
 for item in data:
     l.append_node(item)
 
-
-node = l.head
-
-
-print(l)
-
 hash = {}
-
+print("Before:{}".format(l))
+node = l.head
+previous = None
 while node != None:
     if hash.get(node.data) == True:
-        node.prev.next = node.next
+        previous.next = node.next
     else:
         hash[node.data] = True
+        previous = node
     node = node.next
-
-print(hash)
-print(l)
+print("After:{}".format(l))
