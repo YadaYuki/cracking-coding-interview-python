@@ -24,3 +24,8 @@ class LinkedList:
             node = node.next
         return s
     
+    def get_node(self,k:int) -> Node:
+        n = self.head
+        for i in range(k):
+            n = n.next
+        return n
