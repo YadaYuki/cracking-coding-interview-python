@@ -1,7 +1,6 @@
 # 2.5
 from linked_list import LinkedList,Node
 
-# Note a and b is Same Digits Num LinkedList
 def sum_linked_list(a:LinkedList,b:LinkedList) -> LinkedList:
     na,nb = a.head,b.head
     
@@ -26,6 +25,15 @@ def sum_linked_list(a:LinkedList,b:LinkedList) -> LinkedList:
         # next digit
         na,nb = na.next,nb.next
     
+    while na is not None:
+        l_sum.append_node(na.data+flag)
+        na = na.next
+        flag = 0 
+    while nb is not None:
+        l_sum.append_node(nb.data+flag)
+        nb = nb.next
+        flag = 0 
+
     if flag == 1:
         l_sum.append_node(data=1)
 
@@ -33,7 +41,7 @@ def sum_linked_list(a:LinkedList,b:LinkedList) -> LinkedList:
 
 if __name__ == "__main__":
 
-    a,b = [7,1,6],[5,9,2]
+    a,b = [7,1,6],[5,9,5,2,1]
     la,lb = LinkedList(head_data=a[0]),LinkedList(head_data=b[0])
 
     for item in a[1:]:

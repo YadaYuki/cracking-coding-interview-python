@@ -4,7 +4,6 @@ class Node:
         self.prev:Node = None
         self.next:Node = None
 
-
 class LinkedList: 
 
     def __init__(self,head_data:int):
@@ -31,3 +30,9 @@ class LinkedList:
         for i in range(k):
             n = n.next
         return n
+
+def initialize_linked_list_from_array(array)->LinkedList:
+    l = LinkedList(head_data=array[0])
+    for item in array[1:]:
+        l.append_node(item)
+    return l
