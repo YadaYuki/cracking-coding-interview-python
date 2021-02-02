@@ -10,11 +10,13 @@ class LinkedList:
     def __init__(self,head_data:int):
         self.head = Node(head_data)
         self.tail = self.head
+        self.length = 1
 
     def append_node(self,data:int):
         self.tail.next = Node(data)
         self.tail.next.prev = self.tail
         self.tail = self.tail.next
+        self.length += 1
 
     def __str__(self):
         s = ""

@@ -20,14 +20,9 @@ def sum_linked_list(a:LinkedList,b:LinkedList) -> LinkedList:
 
     while (na is not None) and  (nb is not None):
         # calculate sum
-        n_data = na.data + nb.data + flag
-        if n_data >= 10:
-            l_sum.append_node(data=n_data-10)
-            flag = 1
-        else:
-            l_sum.append_node(data=n_data)
-            flag = 0
-        
+        n_data = (na.data + nb.data + flag) % 10
+        flag = int((na.data + nb.data + flag) / 10)
+        l_sum.append_node(data=n_data)
         # next digit
         na,nb = na.next,nb.next
     
