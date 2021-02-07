@@ -36,7 +36,7 @@ class NodeUnidirectional:
         self.data = data
         self.next:NodeUnidirectional = None
 
-class LinkedListNodeUnidirectional: 
+class LinkedListUnidirectional: 
 
     def __init__(self,head_data:int):
         self.head = NodeUnidirectional(head_data)
