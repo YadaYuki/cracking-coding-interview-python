@@ -7,7 +7,6 @@ map = {}
 
 
 # TODO: refactarize
-
 def get_depth(root:Node):
     if root == None:
         return 0    
