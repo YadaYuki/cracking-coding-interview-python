@@ -11,8 +11,6 @@ def magic_index_recursion(arr,head,tail):
   elif arr[mid] < mid:
     return magic_index_recursion(arr,head=mid+1,tail=tail)
 
-  return []
-
 def magic_index(arr):
   return magic_index_recursion(arr,head=0,tail=len(arr)-1)
 
